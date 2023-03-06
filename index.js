@@ -1,7 +1,9 @@
+console.log('port:', process.env.PORT)
+
 import http from "http";
 import { create } from "ipfs";
 
-const ipfs_port = 3737;
+const ipfs_port = 443;
 const health_port = 10000;
 
 const server = http.createServer((req, res) => {
