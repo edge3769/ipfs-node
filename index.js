@@ -3,19 +3,19 @@ console.log('port:', process.env.PORT)
 import http from "http";
 import { create } from "ipfs";
 
-const ipfs_port = 443;
+const ipfs_port = 10000;
 const health_port = 10000;
 
-const server = http.createServer((req, res) => {
-  if (req.url === "/health") {
-    res.writeHead(200);
-    res.end();
-  }
-});
+// const server = http.createServer((req, res) => {
+//   if (req.url === "/health") {
+//     res.writeHead(200);
+//     res.end();
+//   }
+// });
 
-server.listen(health_port, () => {
-  console.log(`Server is running on port ${health_port}`);
-});
+// server.listen(health_port, () => {
+//   console.log(`Server is running on port ${health_port}`);
+// });
 
 create({
   config: {
